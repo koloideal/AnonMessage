@@ -1,81 +1,206 @@
-.flash{
-
-    padding: 10px;
-    font-size: large;
-    font-weight: bolder;
-    width: max-content;
-    height: max-content;
-    color: white;
-    border-radius: 10px;
-    font-family: "Candara", serif;
-    position: absolute;
-    top: 11%;
-    left: 47%;
-
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter";
 }
 
-.flash.invalid{
-
-    background-color: red;
+body {
+  background-color: #454545;
 }
 
-.flash.success{
-
-    background-color: green;
-
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-#main {
-
-    border: 1px solid black;
-    width: 550px;
-    height: 100%;
-    position: absolute;
-    left: 35%;
-    padding: 15px;
-    overflow: auto;
-    background-color: #b8bcb8;
+.header_hero {
+  background-color: #0d0d0d;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-#enter{
-
-    width: max-content;
-    height: max-content;
-    font-family: "Candara", serif;
-
+.icon {
+  margin-right: 10px;
 }
 
-label{
-
-    font-size: larger;
-    font-weight: bolder;
-
+.gradient-text {
+  background: linear-gradient(0deg, #5e60ce, #4ea8de);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-#butt{
-
-    background-color: #3fbc33;
-    padding: 7px;
-    font-size: large;
-    font-weight: bolder;
-    width: max-content;
-    height: max-content;
-    color: white;
-    border-radius: 15px;
-    font-family: "Candara", serif;
-    border: none
-
+.username_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-#butt:hover{
-
-    background-color: #00c51b;
-
+.username_input {
+  border-radius: 9px;
+  outline: none;
+  overflow: hidden;
+  height: 64px;
+  width: 638px;
+  position: absolute;
+  background: #262626;
+  border: none;
+  color: white;
+  padding-inline: 20px;
+  font-size: 20px;
 }
 
-#butt:active{
-
-    box-shadow: #b8bcb8;
-
+.question {
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
 }
 
+.text_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  flex-direction: column;
+}
+
+.textarea {
+  border-radius: 9px;
+  outline: none;
+  overflow: hidden;
+  height: 300px;
+  width: 638px;
+  background: #333333;
+  border: none;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  resize: none;
+}
+
+.button_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.button {
+  border-radius: 9px;
+  outline: none;
+  overflow: hidden;
+  height: 64px;
+  width: 638px;
+  background: #1e6f9f;
+  border: none;
+  color: white;
+  font-size: 20px;
+  padding-inline: 20px;
+  transition: all 0.2s;
+}
+
+.button:hover {
+  background: #1e709fb6;
+}
+
+.button:active {
+  background: #1e709f8e;
+}
+
+.button_text {
+  font-size: 25px;
+  font-weight: bold;
+  margin-right: 2px;
+}
+
+#flash_ok {
+  display: flex;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  width: 300px;
+  height: 40px;
+  background-color: #1e709fb7;
+  position: absolute;
+  top: 20px;
+  border-radius: 8px;
+  transition: opacity 0.4s;
+}
+
+#flash_err {
+  display: flex;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  width: 300px;
+  height: 40px;
+  background-color: #9f1e29b7;
+  position: absolute;
+  top: 20px;
+  border-radius: 8px;
+  transition: opacity 0.4s;
+}
+
+#flash_ok.active {
+  opacity: 1;
+}
+
+#flash_err.active {
+  opacity: 1;
+}
+
+.about {
+  position: absolute;
+  top: -100px;
+  left: 50px;
+  max-width: 300px;
+  background: #2c2c2c;
+  padding: 10px;
+  border-radius: 9px;
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+
+.about > p {
+  color: white;
+}
+
+.question:hover + .about {
+  opacity: 1;
+}
+
+.footer_div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2c2c2c;
+  font-size: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  color: white;
+  padding-inline: 40px;
+}
+
+.github {
+  color: white;
+  outline: none;
+}
+
+.git_ico {
+  font-size: 25px;
+}

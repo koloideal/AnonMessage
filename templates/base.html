@@ -1,42 +1,80 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
-<head>
-
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <head>
+    <link rel="stylesheet" href="/static/style.css" />
     <title>Форма отправки данных</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-</head>
+  <body>
+    <!-- MAIN CONTAINER -->
+    <main>
+      <div class="header_hero">
+        <h1 class="gradient-text">
+          <i class="fa-solid fa-signature icon"></i>Введите сообщение и никнейм
+        </h1>
+      </div>
+      <!-- USERNAME INPUT -->
+      <div class="username_div">
+        <input
+          type="text"
+          class="username_input"
+          placeholder="Type username..."
+          maxlength="70"
+        />
+      </div>
+      <!-- TEXT INPUT -->
+      <div class="text_div">
+        <textarea
+          class="textarea"
+          cols="30"
+          rows="10"
+          placeholder="Type message..."
+        ></textarea>
+      </div>
+      <!-- BUTTON -->
+      <div class="button_div">
+        <button class="button" onclick="showOKFlash()">
+          <span class="button_text">Отправить</span>
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </div>
+      <!-- FLASHES -->
+      <div id="flash_ok">Сообщение отправлено</div>
 
-<body>
+      <div id="flash_err">Сообщение не отправлено</div>
 
-    <div id="main">
-
-        <div id="enter">
-
-            <h1>Введите сообщение и юзернейм</h1>
-
-            <form action="{{url_for('contact') }}" method="post">
-
-                <label for="username">Юзернейм:</label><br>
-                <input type="text" id="username" name="username" required><br><br>
-
-                <label for="text">Сообщение:</label><br>
-                <textarea rows="7" cols="50" id="text" name="text" required> </textarea><br><br>
-
-                <input type="submit" id="butt" value="Отправить">
-
-            </form>
-
-            {% for cat, msg in get_flashed_messages(True) %}
-                <div class="flash {{ cat }}">{{ msg }}</div>
-            {% endfor %}
-
+      <!-- FOOTER -->
+      <footer class="footer_div">
+        <i class="fa-solid fa-question question"></i>
+        <!-- ABOUT -->
+        <div class="about">
+          <p>Это приложении о том о том о том о том о том о том</p>
         </div>
-
-    </div>
-
-</body>
-
+        <span class="footer_text"
+          >made by kolo
+          <a href="https://github.com/koloideal" target="_blank" class="github"
+            ><i class="fa-brands fa-github git_ico" re></i
+          ></a>
+          & yuKILLING
+          <a href="https://github.com/yuKILLING" target="_blank" class="github">
+            <i class="fa-brands fa-github git_ico"></i> </a
+        ></span>
+      </footer>
+    </main>
+    <script src="/static/index.js"></script>
+  </body>
 </html>
