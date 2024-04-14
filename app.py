@@ -1,4 +1,4 @@
-from quart import Quart, render_template, request, flash
+from quart import Quart, render_template, request, flash, get_flashed_messages
 from message_to_user import main
 from telethon.errors.rpcerrorlist import PeerIdInvalidError, UsernameInvalidError
 import configparser

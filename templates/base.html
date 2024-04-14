@@ -50,17 +50,16 @@
         </div>
         <!-- BUTTON -->
         <div class="button_div">
-          <button class="button" type="submit" onclick="showOKFlash()">
+          <button class="button" type="submit">
             <span class="button_text">Отправить</span>
             <i class="fa-solid fa-paper-plane"></i>
           </button>
         </div>
       </form>
       <!-- FLASHES -->
-
-      <div id="flash_ok">Сообщение отправлено</div>
-
-      <div id="flash_err">Сообщение не отправлено</div>
+      {% for cat, flash in get_flashed_messages(True) %}
+      <div id={{cat}}>{{flash}}</div>
+      {% endfor %}
 
       <!-- FOOTER -->
       <footer class="footer_div">
