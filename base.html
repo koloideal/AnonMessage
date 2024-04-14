@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Форма отправки данных</title>
+
+</head>
+
+<body>
+
+    <div id="main">
+
+        <div id="enter">
+
+            <h1>Введите сообщение и юзернейм</h1>
+
+            <form action="{{url_for('contact') }}" method="post">
+
+                <label for="username">Юзернейм:</label><br>
+                <input type="text" id="username" name="username" required><br><br>
+
+                <label for="text">Сообщение:</label><br>
+                <textarea rows="7" cols="50" id="text" name="text" required> </textarea><br><br>
+
+                <input type="submit" id="butt" value="Отправить">
+
+            </form>
+
+            {% for cat, msg in get_flashed_messages(True) %}
+                <div class="flash {{ cat }}">{{ msg }}</div>
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
