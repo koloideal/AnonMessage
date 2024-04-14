@@ -29,11 +29,11 @@ async def contact():
 
         except (PeerIdInvalidError, UsernameInvalidError, ValueError):
 
-            await flash('Not sent', category='invalid')
+            await flash('Not sent', category='flash_err')
 
         else:
 
-            await flash('Sent', category='success')
+            await flash('Sent', category='flash_ok')
 
     return await render_template('base.html')
 

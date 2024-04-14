@@ -1,22 +1,32 @@
 * {
+
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Inter";
+  font-family: "Inter", serif;
+
 }
+
 
 body {
+
   background-color: #454545;
+
 }
 
+
 main {
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
 
+
 .header_hero {
+
   background-color: #0d0d0d;
   width: 100%;
   height: 200px;
@@ -24,26 +34,38 @@ main {
   justify-content: center;
   align-items: center;
   position: relative;
+
 }
+
 
 .icon {
+
   margin-right: 10px;
+
 }
 
+
 .gradient-text {
+
   background: linear-gradient(0deg, #5e60ce, #4ea8de);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
 }
 
+
 .username_div {
+
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+
 }
 
+
 .username_input {
+
   border-radius: 9px;
   outline: none;
   overflow: hidden;
@@ -55,23 +77,32 @@ main {
   color: white;
   padding-inline: 20px;
   font-size: 20px;
+
 }
 
+
 .question {
+
   color: white;
   cursor: pointer;
   font-size: 20px;
+
 }
 
+
 .text_div {
+
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 80px;
   flex-direction: column;
+
 }
 
+
 .textarea {
+
   border-radius: 9px;
   outline: none;
   overflow: hidden;
@@ -83,16 +114,22 @@ main {
   font-size: 20px;
   padding: 20px;
   resize: none;
+
 }
 
+
 .button_div {
+
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+
 }
 
+
 .button {
+
   border-radius: 9px;
   outline: none;
   overflow: hidden;
@@ -104,23 +141,35 @@ main {
   font-size: 20px;
   padding-inline: 20px;
   transition: all 0.2s;
+
 }
+
 
 .button:hover {
+
   background: #1e709fb6;
+
 }
+
 
 .button:active {
+
   background: #1e709f8e;
+
 }
 
+
 .button_text {
+
   font-size: 25px;
   font-weight: bold;
   margin-right: 2px;
+
 }
 
+
 #flash_ok {
+
   display: flex;
   opacity: 0;
   justify-content: center;
@@ -135,9 +184,12 @@ main {
   top: 20px;
   border-radius: 8px;
   transition: opacity 0.4s;
+
 }
 
+
 #flash_err {
+
   display: flex;
   opacity: 0;
   justify-content: center;
@@ -152,17 +204,26 @@ main {
   top: 20px;
   border-radius: 8px;
   transition: opacity 0.4s;
+
 }
+
 
 #flash_ok.active {
+
   opacity: 1;
+
 }
+
 
 #flash_err.active {
+
   opacity: 1;
+
 }
 
+
 .about {
+
   position: absolute;
   top: -100px;
   left: 50px;
@@ -172,17 +233,26 @@ main {
   border-radius: 9px;
   transition: opacity 0.3s;
   opacity: 0;
+
 }
+
 
 .about > p {
+
   color: white;
+
 }
+
 
 .question:hover + .about {
+
   opacity: 1;
+
 }
 
+
 .footer_div {
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -194,13 +264,20 @@ main {
   height: 50px;
   color: white;
   padding-inline: 40px;
+
 }
+
 
 .github {
+
   color: white;
   outline: none;
+
 }
 
+
 .git_ico {
+
   font-size: 25px;
+
 }

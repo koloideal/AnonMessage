@@ -2,7 +2,7 @@
 
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title>Форма отправки данных</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,31 +28,36 @@
         </h1>
       </div>
       <!-- USERNAME INPUT -->
-      <div class="username_div">
-        <input
-          type="text"
-          class="username_input"
-          placeholder="Type username..."
-          maxlength="70"
-        />
-      </div>
-      <!-- TEXT INPUT -->
-      <div class="text_div">
-        <textarea
-          class="textarea"
-          cols="30"
-          rows="10"
-          placeholder="Type message..."
-        ></textarea>
-      </div>
-      <!-- BUTTON -->
-      <div class="button_div">
-        <button class="button" onclick="showOKFlash()">
-          <span class="button_text">Отправить</span>
-          <i class="fa-solid fa-paper-plane"></i>
-        </button>
-      </div>
+      <form action="/" method="post">
+        <div class="username_div">
+          <input
+            name="username"
+            type="text"
+            class="username_input"
+            placeholder="Type username..."
+            maxlength="70"
+          />
+        </div>
+        <!-- TEXT INPUT -->
+        <div class="text_div">
+          <textarea
+            name="text"
+            class="textarea"
+            cols="30"
+            rows="10"
+            placeholder="Type message..."
+          ></textarea>
+        </div>
+        <!-- BUTTON -->
+        <div class="button_div">
+          <button class="button" type="submit" onclick="showOKFlash()">
+            <span class="button_text">Отправить</span>
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </div>
+      </form>
       <!-- FLASHES -->
+
       <div id="flash_ok">Сообщение отправлено</div>
 
       <div id="flash_err">Сообщение не отправлено</div>
