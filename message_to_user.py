@@ -8,7 +8,7 @@ config.read('config.ini')
 API_ID = int(config['Telegram']['API_ID'])
 API_HASH = config['Telegram']['API_HASH']
 
-client = TelegramClient('kolo_id', API_ID, API_HASH)
+client = TelegramClient('anonimizer', API_ID, API_HASH)
 
 
 async def get_user(username):
