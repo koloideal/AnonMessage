@@ -100,6 +100,28 @@ main {
 
 }
 
+.for_connect {
+
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  left: 220px;
+
+}
+
+a{
+
+  text-decoration: none;
+  color: white;
+
+}
+
+
+a:hover{
+
+  color: #4ab2ff;
+
+}
 
 .text_div {
 
@@ -233,7 +255,7 @@ main {
 .about {
 
   position: absolute;
-  top: -180px;
+  top: -260px;
   left: 50px;
   max-width: 510px;
   background: #2c2c2c;
