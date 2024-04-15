@@ -86,6 +86,17 @@ main {
   color: white;
   cursor: pointer;
   font-size: 20px;
+  margin-left: 25px;
+
+}
+
+.shield {
+
+  position: absolute;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  left: 140px;
 
 }
 
@@ -233,6 +244,20 @@ main {
 
 }
 
+.security {
+
+  position: absolute;
+  top: -300px;
+  left: 50px;
+  max-width: 510px;
+  background: #2c2c2c;
+  padding: 10px;
+  border-radius: 9px;
+  transition: opacity 0.3s;
+  opacity: 0;
+
+}
+
 
 .about > p {
 
@@ -240,10 +265,22 @@ main {
 
 }
 
+.security > p{
 
-.question:hover + .about {
+  color: white;
+
+}
+
+
+.question:hover ~ .about {
 
   opacity: 1;
+}
+
+.shield:hover ~ .security {
+
+  opacity: 1;
+
 }
 
 
