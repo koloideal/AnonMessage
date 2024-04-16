@@ -86,9 +86,42 @@ main {
   color: white;
   cursor: pointer;
   font-size: 20px;
+  margin-left: 25px;
 
 }
 
+.shield {
+
+  position: absolute;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  left: 140px;
+
+}
+
+.for_connect {
+
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  left: 220px;
+
+}
+
+a{
+
+  text-decoration: none;
+  color: white;
+
+}
+
+
+a:hover{
+
+  color: #4ab2ff;
+
+}
 
 .text_div {
 
@@ -106,7 +139,7 @@ main {
   border-radius: 9px;
   outline: none;
   overflow: hidden;
-  height: 300px;
+  /* height: 300px; */
   width: 638px;
   background: #333333;
   border: none;
@@ -116,6 +149,41 @@ main {
   resize: none;
 
 }
+
+@media (max-width: 980px){
+  .textarea {
+    border-radius: 9px;
+    outline: none;
+    overflow: hidden;
+    height: 500px;
+    width: 638px;
+    background: #333333;
+    border: none;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    resize: none;
+    margin-bottom: 30px;
+  }
+
+}
+
+@media (max-width:768px) {
+  .textarea {
+    border-radius: 9px;
+    outline: none;
+    overflow: hidden;
+    height: 700px;
+    width: 638px;
+    background: #333333;
+    border: none;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    resize: none;
+  }
+}
+
 
 
 .button_div {
@@ -222,7 +290,21 @@ main {
 .about {
 
   position: absolute;
-  top: -180px;
+  top: -260px;
+  left: 50px;
+  max-width: 510px;
+  background: #2c2c2c;
+  padding: 10px;
+  border-radius: 9px;
+  transition: opacity 0.3s;
+  opacity: 0;
+
+}
+
+.security {
+
+  position: absolute;
+  top: -300px;
   left: 50px;
   max-width: 510px;
   background: #2c2c2c;
@@ -240,10 +322,22 @@ main {
 
 }
 
+.security > p{
 
-.question:hover + .about {
+  color: white;
+
+}
+
+
+.question:hover ~ .about {
 
   opacity: 1;
+}
+
+.shield:hover ~ .security {
+
+  opacity: 1;
+
 }
 
 
