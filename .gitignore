@@ -1,6 +1,6 @@
 anonimizer.session
 anonimizer.session-journal
-config.ini
+secret_data/config.ini
 .idea
 .venv
 __pycache__

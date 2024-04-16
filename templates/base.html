@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title>Форма отправки данных</title>
+    <title>AnonMessage</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Righteous&display=swap"
@@ -19,7 +19,7 @@
           <div id="{{category}}">{{flash}}</div>
         {% endfor %}
         <h1 class="gradient-text">
-          <i class="fa-solid fa-signature icon"></i>Введите сообщение и никнейм
+          <i class="fa-solid fa-signature icon"></i>Введите сообщение и юзернейм
         </h1>
       </div>
       <!-- USERNAME INPUT -->
@@ -54,10 +54,10 @@
             </div>
           <div class="security">
             <p>
-                Создатель данного приложения не несёт ответственность за возможные правонарушения,
+                Создатель данного приложения <b><u>не несёт</u></b> ответственность за возможные правонарушения,
                 совершённые посредством этого приложения.<br><br>
                 Перед использованием приложения убедитесь, что вы не нарушаете закон и чьи либо права.<br><br>
-                Приложения соблюдает правила и политику конфиденциальности Telegram.
+                Приложения соблюдает правила и политику конфиденциальности <i>Telegram</i>.
             </p>
           </div>
           <span>
