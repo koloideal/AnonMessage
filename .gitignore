@@ -1,6 +1,7 @@
 anonimizer.session
 anonimizer.session-journal
-secret_data/config.ini
+secret_data
 .idea
 .venv
 __pycache__
+identifier.sqlite
