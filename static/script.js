@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
-          const flashErr = document.getElementById('flash_ok');
+          const flashOk = document.getElementById('flash_ok');
 
-          flashErr.addEventListener('animationend', function () {
-            flashErr.remove();
+          flashOk.addEventListener('animationend', function () {
+            flashOk.remove();
           });
         });
 
