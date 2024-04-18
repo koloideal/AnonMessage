@@ -1,7 +1,6 @@
 import configparser
 from telethon import TelegramClient
 from telethon.tl.functions.users import GetFullUserRequest
-import emoji
 
 config = configparser.ConfigParser()
 config.read('secret_data/config.ini')
