@@ -3,5 +3,6 @@ anonimizer.session-journal
 secret_data
 .idea
 .venv
+venv
 __pycache__
 identifier.sqlite
